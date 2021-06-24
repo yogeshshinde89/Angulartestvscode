@@ -1,0 +1,32 @@
+
+<!-- <div>
+    <p *ngIf="isAdmin">Magic element!</p>
+</div> -->
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="navbar-nav">
+        <!-- <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="Isnouser">No User</a> -->
+        <!-- <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Pending Profile</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Delete Profile</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isNonAdmin">Update Profile</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isNonAdmin">Update Photo</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isNonAdmin">De-Activate Profile</a>
+        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isNonAdmin">Delete Profile</a> -->
+        <!-- <app-menu></app-menu> -->
+        <!-- <a class="nav-item nav-link" (click)="logout()">Logout</a> -->
+    </div>
+</nav> 
+<div class="card mt-4">
+    <h4 class="card-header">Home</h4>
+    <div class="card-body">
+        <p>You're logged in with Angular 10 & JWT!!</p>
+        <p>Your role is: <strong>{{user.role}}</strong>.</p>
+        <p>This page can be accessed by <u>all authenticated users</u>.</p>
+        <p class="mb-1">Current user from secure api end point:</p>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="userFromApi">
+            <li>{{userFromApi.firstName}} {{userFromApi.lastName}}</li>
+        </ul>
+    </div>
+</div>
